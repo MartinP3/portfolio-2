@@ -9,9 +9,9 @@
 }
 </script>
 
-<section class="flex flex-col sm:flex-col items-center md:flex-row m-4 justify-center">
-  <div class="flip-card w-96" class:flipped={isFlipped} on:click={toggleFlip} on:keyup={toggleFlip}>
-    <div class="flip-card-inner">
+<section class="flex flex-col sm:flex-col items-center md:flex-row m-4 justify-evenly">
+  <div class="flip-card w-80" class:flipped={isFlipped} on:click={toggleFlip} on:keyup={toggleFlip}>
+    <div class="flip-card-inner mb-36 md:mb-0">
       <div class="frontside flex items-center">
         <P class="max-w-xl mb-4 md:mx-2">
           <h1 class="text-4xl font-bold mb-2 title">About Me</h1>
@@ -31,7 +31,7 @@
       </div>
     </div>
   </div>
-  <Img src={Image} alt="lol" size="max-w-sm" class="filter grayscale"/>
+  <Img src={Image} alt="Picture of Martin Pedersen" size="max-w-[20rem]" class="filter grayscale"/>
 </section>
 
 <style>
