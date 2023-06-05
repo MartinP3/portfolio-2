@@ -1,71 +1,49 @@
 <script>
   import { Card } from "flowbite-svelte";
   import Image from "../assets/230602110916.png"
-
-  let isFlipped = false;
-
-  function toggleFlip() {
-    isFlipped = !isFlipped;
-  }
 </script>
 
-<section class="portfolioSection flex flex-col items-center my-4 gap-4">
-  <div>
-    <div class="flip-card w-96" class:flipped={isFlipped} on:click={toggleFlip} on:keydown={toggleFlip}>
-      <div class="flip-card-inner">
-        <div class="frontside">
-          <Card padding="none" class="p-4">
-            <img src={Image} alt="lol" />
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Semester Project 2</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
-              Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-            </p>
-          </Card>
-        </div>
-        <div class="backside">
-          <Card padding="none" class="p-4 backside">
-            <img src={Image} alt="lol" />
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">FLIPPED</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam adipisci eius nesciunt reprehenderit. Eius ipsam
-              excepturi asperiores quibusdam exercitationem amet numquam, accusantium, nihil, officiis dicta possimus nemo
-              dolores aut facere.
-            </p>
-            <p class="text-center">Links here</p>
-          </Card>
-        </div>
+<section class="flex flex-col items-center mb-4 mt-8">
+  <h1 class="text-4xl font-bold title mb-4">My projects</h1>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    <Card padding="none" class="p-4">
+      <img src={Image} alt="front page of semester project 2 site" />
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Semester Project 2</h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
+        In the Semester Project 2 I made a website for auctions, where you could bid on items and sell your own items.
+      </p>
+      <div class="flex justify-center gap-2">
+        <a href="https://github.com" target="_blank" class="transition delay-100 hover:text-blue-700"><i class="fa-brands fa-github"></i>GitHub</a>
+        <a href="https://github.com" target="_blank" class="transition delay-100 hover:text-blue-700"><i class="fa-solid fa-paper-plane"></i>Site</a>
       </div>
-    </div>
+    </Card>
+    <Card padding="none" class="p-4">
+      <img src={Image} alt="front page of Javascript Frameworks site" />
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Javascript Frameworks</h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
+        In the JavaScript frameworks course I made a online shopping website where users could add items to their cart and purchase them.
+      </p>
+      <div class="flex justify-center gap-2">
+        <a href="https://github.com" target="_blank" class="transition delay-100 hover:text-blue-700"><i class="fa-brands fa-github"></i>GitHub</a>
+        <a href="https://github.com" target="_blank" class="transition delay-100 hover:text-blue-700"><i class="fa-solid fa-paper-plane"></i>Site</a>
+      </div>
+    </Card>
+    <Card padding="none" class="p-4">
+      <img src={Image} alt="front page of project exam 2 site" />
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Project Exam 2</h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
+        In the project exam 2 course I made a website for a fictional company where users could rent out locations and book locations that others listed.
+      </p>
+      <div class="flex justify-center gap-2">
+        <a href="https://github.com" target="_blank" class="transition delay-100 hover:text-blue-700"><i class="fa-brands fa-github"></i>GitHub</a>
+        <a href="https://github.com" target="_blank" class="transition delay-100 hover:text-blue-700"><i class="fa-solid fa-paper-plane"></i>Site</a>
+      </div>
+    </Card>
   </div>
 </section>
 
 <style>
-  .flip-card {
-    perspective: 900px;
-    cursor: pointer;
-  }
-
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-  }
-
-  .flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .frontside,
-  .backside {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-
-  .backside {
-    transform: rotateY(180deg);
+  .title {
+    font-family: 'Poppins', sans-serif;
   }
 </style>
