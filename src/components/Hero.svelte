@@ -2,8 +2,8 @@
 
 </script>
 
-<section class="heroDiv p-4 flex justify-center items-center">
-  <div class="uppercase text-7xl bg-neutral-100 p-4">Martin Pedersen</div>
+<section class="heroDiv p-4 flex justify-center items-center mb-36 md:mb-16">
+  <div class="uppercase text-7xl bg-neutral-100 p-1 sm:p-4">Martin Pedersen</div>
 </section>
 
 <style>
