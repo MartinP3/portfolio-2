@@ -1,6 +1,5 @@
 <script>
   import { Card } from "flowbite-svelte";
-  import Image from "../../assets/230602110916.png"
 </script>
 
 <section class="flex flex-col justify-center items-center mb-4 mt-8">
