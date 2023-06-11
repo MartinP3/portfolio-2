@@ -1,10 +1,25 @@
 <script>
-	import { Alert } from 'flowbite-svelte';
+	import Hero from '../components/static/Hero.svelte';
+	import AboutMe from '../components/static/AboutMe.svelte';
+	import Portfolio from '../components/static/Portfolio.svelte';
+	// @ts-ignore for some reason it doesn't like this import while I'm using font awesome  icons?
+	import Contact from '../components/static/Contact.svelte';
+	import MySkills from '../components/static/MySkills.svelte';
 </script>
 
-<div class="p-8">
-	<Alert>
-		<span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
-	</Alert>
-  test
+<svelte:head>
+	<title>Martin Pedersen</title>
+</svelte:head>
+<div>
+	<Hero />
+	<AboutMe />
+	<MySkills />
+	<Portfolio />
+	<Contact />
 </div>
+
+<style>
+	* {
+		scroll-behavior: smooth;
+	}
+</style>
